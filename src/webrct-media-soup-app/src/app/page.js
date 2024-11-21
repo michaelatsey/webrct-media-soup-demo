@@ -9,7 +9,7 @@ export default function Home() {
           Bienvenue sur l&apos;application WebRTC
         </h1>
         <Link
-          href="/video"
+          href="/meet?roomId=12xmeglk"
           className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
         >
           Rejoindre le Chat Vidéo

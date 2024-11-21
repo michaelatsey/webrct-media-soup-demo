@@ -124,7 +124,8 @@ io.on("connection", (socket) => {
 });
 
 // Lancer le serveur
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3004;
+const HOST = process.env.HOST || "localhost"; // Votre IP locale
 server.listen(PORT, () => {
-  console.log(`MediaSoup server running on port ${PORT}`);
+  console.log(`MediaSoup server running on ${HOST}:${PORT}`);
 });
