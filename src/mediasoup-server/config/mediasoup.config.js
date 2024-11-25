@@ -24,4 +24,17 @@ module.exports = {
       },
     ],
   },
+  webRtcTransport: {
+    listenIps: [
+      {
+        ip: "0.0.0.0", // Écoute sur toutes les interfaces réseau
+        announcedIp: "192.168.1.150", // Assurez-vous que c'est l'IP du serveur
+      },
+    ],
+    enableUdp: true,
+    enableTcp: true,
+    preferUdp: true,
+    // Forcer l'utilisation de HTTPS
+    secure: true,
+  },
 };

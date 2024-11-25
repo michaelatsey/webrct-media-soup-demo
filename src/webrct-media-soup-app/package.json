@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "secure-dev": "next dev -H 192.168.1.150 -p 3002 --experimental-https",
+    "dev": "next dev -H <HOST_CLIENT> -p <PORT_CLIENT>",
+    "secure-dev": "next dev -H <HOST_CLIENT> -p <PORT_CLIENT> --experimental-https --experimental-https-key ./certificates/server-webrtc.key --experimental-https-cert ./certificates/server-webrtc.crt",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

@@ -6,8 +6,8 @@ const mediasoup = require("mediasoup");
 require("dotenv").config();
 
 const options = {
-  key: fs.readFileSync("./certs/server-webrtc.key"), // Chemin vers votre clé privée
-  cert: fs.readFileSync("./certs/server-webrtc.crt"), // Chemin vers votre certificat
+  key: fs.readFileSync("./certs/key.pem"), // Chemin vers votre clé privée
+  cert: fs.readFileSync("./certs/cert.pem"), // Chemin vers votre certificat
 };
 
 const app = express();

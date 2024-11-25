@@ -1,13 +1,8 @@
 "use client";
+
 import { connectSocket } from "@/utils/socketClient";
 import { initializeWebRTC } from "@/utils/webrtc";
-import { useSearchParams } from "next/navigation";
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { io } from "socket.io-client";
-
-// const socketInstance = io(
-//   process.env.NEXT_PUBLIC_SERVER_URL || "http://localhost:3001"
-// );
 
 export default function Room({ roomId }) {
   const [socket, setSocket] = useState(null);
@@ -18,7 +13,6 @@ export default function Room({ roomId }) {
   const remoteVideoRef = useRef(null);
 
   const [mediaStream, setMediaStream] = useState(null);
-  //const mediaStream = useRef(null); // Stores the user's media stream
 
   const [isConnected, setIsConnected] = useState(false);
   const [messages, setMessages] = useState([]);
@@ -151,13 +145,7 @@ export default function Room({ roomId }) {
             onChange={(e) => setUsername(e.target.value)}
             className="w-full p-2 border mb-2 rounded"
           />
-          {/* <input
-            type="text"
-            placeholder="Enter room ID"
-            value={roomId}
-            onChange={(e) => setRoomId(e.target.value)}
-            className="w-full p-2 border mb-4 rounded"
-          /> */}
+
           <button
             onClick={joinRoom}
             className="bg-blue-500 text-white px-4 py-2 rounded w-full"

@@ -14,13 +14,5 @@ export const initializeWebRTC = async (
       "MediaSoup device loaded with capabilities:",
       routerRtpCapabilities
     );
-
-    // const stream = await navigator.mediaDevices.getUserMedia({
-    //   video: true,
-    //   audio: true,
-    // });
-    // localVideoRef.current.srcObject = stream;
-
-    // Logique pour envoyer et recevoir des flux vidéo/audio
   });
 };
